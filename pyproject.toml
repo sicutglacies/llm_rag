@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "llm-rag"
+version = "0.1.0"
+description = "RAG Demo Application"
+authors = ["Daniil Semenov <49916703+sicutglacies@users.noreply.github.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+langchain = "^0.0.351"
+openai = "^1.5.0"
+chromadb = "^0.4.20"
+langchainhub = "^0.1.14"
+tiktoken = "^0.5.2"
+unstructured = "^0.11.5"
+rank-bm25 = "^0.2.2"
+faiss-cpu = "^1.7.4"
+lark = "^1.1.8"
+ragas = "^0.0.22"
+python-dotenv = "^1.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
