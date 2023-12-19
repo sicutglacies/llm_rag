@@ -19,6 +19,8 @@ faiss-cpu = "^1.7.4"
 lark = "^1.1.8"
 ragas = "^0.0.22"
 python-dotenv = "^1.0.0"
+streamlit = "^1.29.0"
+watchdog = "^3.0.0"
 
 
 [build-system]
