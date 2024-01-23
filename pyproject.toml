@@ -25,6 +25,7 @@ llama-index = "^0.9.17"
 langchain-community = "^0.0.13"
 langchain-openai = "^0.0.2.post1"
 openpyxl = "^3.1.2"
+ruff = "^0.1.14"
 
 
 [build-system]

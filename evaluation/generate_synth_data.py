@@ -4,12 +4,11 @@ from langchain.chat_models import ChatOpenAI
 from ragas.llms import LangchainLLM
 from generator import RussianTestGenerator
 
-loader = TextLoader('data/docs/bank_name_docs.md')
-docs = loader.load()
-
-
 import dotenv
 dotenv.load_dotenv()
+
+loader = TextLoader('data/docs/bank_name_docs.md')
+docs = loader.load()
 
 
 # Add custom llms and embeddings
@@ -25,16 +24,11 @@ testset_distribution = {
     "conditional": 0.25,
 }
 
-# percentage of conversational question
-chat_qa = 0.2
-
-
 test_generator = RussianTestGenerator(
     generator_llm=generator_llm,
     critic_llm=critic_llm,
     embeddings_model=embeddings_model,
     testset_distribution=testset_distribution,
-    chat_qa=chat_qa,
 )
 
 testset = test_generator.generate(docs, test_size=15)
