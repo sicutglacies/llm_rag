@@ -5,7 +5,6 @@ from app.rag.loader import load_and_split_markdown
 from app.rag.retrieval import get_retriever
 from app.misc import Settings
 
-from langchain import hub
 from langchain.chat_models import ChatOpenAI
 from langchain.schema import StrOutputParser
 from langchain_core.runnables import RunnablePassthrough, RunnableParallel
@@ -21,7 +20,7 @@ chat_prompt = ChatPromptTemplate.from_messages([system_message_prompt])
 def format_docs(docs):
     return "\n\n".join(doc.page_content for doc in docs)
 
-docs = load_and_split_markdown('data/docs/Tinkoff_docs.md', Settings.HEADERS_TO_SPLIT)
+docs = load_and_split_markdown('data/docs/bank_name_docs.md', Settings.HEADERS_TO_SPLIT)
 ensemble_retriever = get_retriever(
     docs, 
     Settings.BM25_K, Settings.MMR_K, Settings.MMR_FETCH_K, 

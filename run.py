@@ -6,7 +6,7 @@ import streamlit as st
 
 st.set_page_config(page_title="RAG")
 st.title("Retrieval Augmented Generation")
-st.header("Помощник по базе знаний о дебетовой карте Тинькофф")
+st.header("Помощник по базе знаний о дебетовой карте bank_name")
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
