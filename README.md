@@ -12,5 +12,5 @@ Retrieval Augmented Generation with LLM based on bank help website
 ### RAGAs metrics
 - make evaluate \
 
-Results of the commands are located in data/evaluation
+Results of the commands are located in data/evaluation \
 Knowledge base data is located in data/docs
